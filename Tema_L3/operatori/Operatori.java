@@ -665,8 +665,362 @@ public class Operatori
             System.out.println("</P>");
             System.out.println("<P><BR>");
             break;
-
+        
         case 2: // '\002'
+            System.out.println("<TABLE BORDER=\"1\" WIDTH=\"100%\">");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B>Tipul opera&#355;iei</B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#8\" onMouseOver=\"ShowStatus('Opera&#355;ii cu numere &icirc;ntregi de tip byte.')\">(8 bi&#355;i)</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#16\" onMouseOver=\"ShowStatus('Opera&#355;ii cu numere &icirc;ntregi de tip short.')\">(16 bi&#355;i)</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#32\" onMouseOver=\"ShowStatus('Opera&#355;ii cu numere &icirc;ntregi de tip int.')\">(32 bi&#355;i)</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#64\" onMouseOver=\"ShowStatus('Opera&#355;ii cu numere &icirc;ntregi de tip long.')\">(64 bi&#355;i)</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>Cel mai mare num&#259;r &icirc;ntreg pozitiv de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b1\" onMouseOver=\"ShowStatus('Cel mai mare num&#259;r &icirc;ntreg pozitiv de tip byte.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s1\" onMouseOver=\"ShowStatus('Cel mai mare num&#259;r &icirc;ntreg pozitiv de tip short.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i1\" onMouseOver=\"ShowStatus('Cel mai mare num&#259;r &icirc;ntreg pozitiv de tip int.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l1\" onMouseOver=\"ShowStatus('Cel mai mare num&#259;r &icirc;ntreg pozitiv de tip long.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>Cel mai mic num&#259;r &icirc;ntreg negativ de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b2\" onMouseOver=\"ShowStatus('Cel mai mic num&#259;r &icirc;ntreg negativ de tip byte.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s2\" onMouseOver=\"ShowStatus('Cel mai mic num&#259;r &icirc;ntreg negativ de tip short.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i2\" onMouseOver=\"ShowStatus('Cel mai mic num&#259;r &icirc;ntreg negativ de tip int.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l2\" onMouseOver=\"ShowStatus('Cel mai mic num&#259;r &icirc;ntreg negativ de tip long.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>Num&#259;rul <FONT COLOR=\"red\">1</FONT>, num&#259;r de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b3\" onMouseOver=\"ShowStatus('Num&#259;rul de tip byte 1.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s3\" onMouseOver=\"ShowStatus('Num&#259;rul de tip short 1.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i3\" onMouseOver=\"ShowStatus('Num&#259;rul de tip int 1.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l3\" onMouseOver=\"ShowStatus('Num&#259;rul de tip long 1.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>Num&#259;rul <FONT COLOR=\"red\">-1</FONT>, num&#259;r de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b4\" onMouseOver=\"ShowStatus('Num&#259;rul de tip byte -1.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s4\" onMouseOver=\"ShowStatus('Num&#259;rul de tip short -1.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i4\" onMouseOver=\"ShowStatus('Num&#259;rul de tip int -1.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l4\" onMouseOver=\"ShowStatus('Num&#259;rul de tip long -1.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>Num&#259;rul <FONT COLOR=\"red\">i</FONT>, num&#259;r de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b5\" onMouseOver=\"ShowStatus('Num&#259;rul de tip byte i.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s5\" onMouseOver=\"ShowStatus('Num&#259;rul de tip short i.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i5\" onMouseOver=\"ShowStatus('Num&#259;rul de tip int i.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l5\" onMouseOver=\"ShowStatus('Num&#259;rul de tip long i.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>Num&#259;rul <FONT COLOR=\"red\">j</FONT>, num&#259;r de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b6\" onMouseOver=\"ShowStatus('Num&#259;rul de tip byte j.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s6\" onMouseOver=\"ShowStatus('Num&#259;rul de tip short j.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i6\" onMouseOver=\"ShowStatus('Num&#259;rul de tip int j.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l6\" onMouseOver=\"ShowStatus('Num&#259;rul de tip long j.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>Schimbare de semn. <FONT COLOR=\"red\">-i</FONT>, num&#259;r de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b7\" onMouseOver=\"ShowStatus('Opera&#355;ia de schimbare de semn a unui num&#259;r &icirc;ntreg de tip byte.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s7\" onMouseOver=\"ShowStatus('Opera&#355;ia de schimbare de semn a unui num&#259;r &icirc;ntreg de tip short.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i7\" onMouseOver=\"ShowStatus('Opera&#355;ia de schimbare de semn a unui num&#259;r &icirc;ntreg de tip int.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l7\" onMouseOver=\"ShowStatus('Opera&#355;ia de schimbare de semn a unui num&#259;r &icirc;ntreg de tip long.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>Complementariere. <FONT COLOR=\"red\">~i</FONT>, num&#259;r de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b8\" onMouseOver=\"ShowStatus('Opera&#355;ia de complementariere a unui num&#259;r &icirc;ntreg de tip byte.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s8\" onMouseOver=\"ShowStatus('Opera&#355;ia de complementariere a unui num&#259;r &icirc;ntreg de tip short.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i8\" onMouseOver=\"ShowStatus('Opera&#355;ia de complementariere a unui num&#259;r &icirc;ntreg de tip int.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l8\" onMouseOver=\"ShowStatus('Opera&#355;ia de complementariere a unui num&#259;r &icirc;ntreg de tip long.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>Incrementare cu 1. <FONT COLOR=\"red\">++i</FONT>, num&#259;r de &#355;ip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b9\" onMouseOver=\"ShowStatus('Opera&#355;ia de incrementare cu 1 a unui num&#259;r &icirc;ntreg de tip byte.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s9\" onMouseOver=\"ShowStatus('Opera&#355;ia de incrementare cu 1 a unui num&#259;r &icirc;ntreg de tip short.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i9\" onMouseOver=\"ShowStatus('Opera&#355;ia de incrementare cu 1 a unui num&#259;r &icirc;ntreg de tip int.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l9\" onMouseOver=\"ShowStatus('Opera&#355;ia de incrementare cu 1 a unui num&#259;r &icirc;ntreg de tip long.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>Decrementare cu 1. <FONT COLOR=\"red\">- -i</FONT>, num&#259;r de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b10\" onMouseOver=\"ShowStatus('Opera&#355;ia de decrementare cu 1 a unui num&#259;r &icirc;ntreg de tip byte.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s10\" onMouseOver=\"ShowStatus('Opera&#355;ia de decrementare cu 1 a unui num&#259;r &icirc;ntreg de tip short.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i10\" onMouseOver=\"ShowStatus('Opera&#355;ia de decrementare cu 1 a unui num&#259;r &icirc;ntreg de tip int.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l10\" onMouseOver=\"ShowStatus('Opera&#355;ia de decrementare cu 1 a unui num&#259;r &icirc;ntreg de tip long.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>Adunare. <FONT COLOR=\"red\">i + j</FONT>, num&#259;r de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b11\" onMouseOver=\"ShowStatus('Opera&#355;ia de adunare a dou&#259; numere &icirc;ntregi de tip byte.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s11\" onMouseOver=\"ShowStatus('Opera&#355;ia de adunare a dou&#259; numere &icirc;ntregi de tip short.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i11\" onMouseOver=\"ShowStatus('Opera&#355;ia de adunare a dou&#259; numere &icirc;ntregi de tip int.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l11\" onMouseOver=\"ShowStatus('Opera&#355;ia de adunare a dou&#259; numere &icirc;ntregi de tip long.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>Sc&#259;dere. <FONT COLOR=\"red\">i - j</FONT>, num&#259;r de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b12\" onMouseOver=\"ShowStatus('Opera&#355;ia de Sc&#259;dere a dou&#259; numere &icirc;ntregi de tip byte.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s12\" onMouseOver=\"ShowStatus('Opera&#355;ia de Sc&#259;dere a dou&#259; numere &icirc;ntregi de tip short.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i12\" onMouseOver=\"ShowStatus('Opera&#355;ia de Sc&#259;dere a dou&#259; numere &icirc;ntregi de tip int.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l12\" onMouseOver=\"ShowStatus('Opera&#355;ia de Sc&#259;dere a dou&#259; numere &icirc;ntregi de tip long.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>&Icirc;nmul&#355;ire. <FONT COLOR=\"red\">i * j</FONT>, num&#259;r de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b13\" onMouseOver=\"ShowStatus('Opera&#355;ia de &Icirc;nmul&#355;ire a dou&#259; numere &icirc;ntregi de tip byte.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s13\" onMouseOver=\"ShowStatus('Opera&#355;ia de &Icirc;nmul&#355;ire a dou&#259; numere &icirc;ntregi de tip short.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i13\" onMouseOver=\"ShowStatus('Opera&#355;ia de &Icirc;nmul&#355;ire a dou&#259; numere &icirc;ntregi de tip int.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l13\" onMouseOver=\"ShowStatus('Opera&#355;ia de &Icirc;nmul&#355;ire a dou&#259; numere &icirc;ntregi de tip long.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>&Icirc;mp&#259;r&#355;ire. <FONT COLOR=\"red\">i / j</FONT>, num&#259;r de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b14\" onMouseOver=\"ShowStatus('Opera&#355;ia de &Icirc;mp&#259;r&#355;ire a dou&#259; numere &icirc;ntregi de tip byte.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s14\" onMouseOver=\"ShowStatus('Opera&#355;ia de &Icirc;mp&#259;r&#355;ire a dou&#259; numere &icirc;ntregi de tip short.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i14\" onMouseOver=\"ShowStatus('Opera&#355;ia de &Icirc;mp&#259;r&#355;ire a dou&#259; numere &icirc;ntregi de tip int.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l14\" onMouseOver=\"ShowStatus('Opera&#355;ia de &Icirc;mp&#259;r&#355;ire a dou&#259; numere &icirc;ntregi de tip long.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>&#350;I logic. <FONT COLOR=\"red\">i &amp; j</FONT>, num&#259;r de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b15\" onMouseOver=\"ShowStatus('Opera&#355;ia &#350;I logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip byte.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s15\" onMouseOver=\"ShowStatus('Opera&#355;ia &#350;I logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip short.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i15\" onMouseOver=\"ShowStatus('Opera&#355;ia &#350;I logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip int.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l15\" onMouseOver=\"ShowStatus('Opera&#355;ia &#350;I logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip long.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>SAU logic. <FONT COLOR=\"red\">i | j</FONT>, num&#259;r de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b16\" onMouseOver=\"ShowStatus('Opera&#355;ia SAU logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip byte.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s16\" onMouseOver=\"ShowStatus('Opera&#355;ia SAU logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip short.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i16\" onMouseOver=\"ShowStatus('Opera&#355;ia SAU logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip int.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l16\" onMouseOver=\"ShowStatus('Opera&#355;ia SAU logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip long.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>SAU EXCLUSIV. <FONT COLOR=\"red\">i ^ j</FONT>, num&#259;r de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b17\" onMouseOver=\"ShowStatus('Opera&#355;ia SAU EXCLUSIV &icirc;ntre dou&#259; numere &icirc;ntregi de tip byte.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s17\" onMouseOver=\"ShowStatus('Opera&#355;ia SAU EXCLUSIV &icirc;ntre dou&#259; numere &icirc;ntregi de tip short.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i17\" onMouseOver=\"ShowStatus('Opera&#355;ia SAU EXCLUSIV &icirc;ntre dou&#259; numere &icirc;ntregi de tip int.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l17\" onMouseOver=\"ShowStatus('Opera&#355;ia SAU EXCLUSIV &icirc;ntre dou&#259; numere &icirc;ntregi de tip long.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>Deplasare la st&acirc;nga. <FONT COLOR=\"red\">i &lt;&lt; j</FONT>, num&#259;r de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b18\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la st&acirc;nga a unui num&#259;r &icirc;ntreg de tip byte.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s18\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la st&acirc;nga a unui num&#259;r &icirc;ntreg de tip short.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i18\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la st&acirc;nga a unui num&#259;r &icirc;ntreg de tip int.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l18\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la st&acirc;nga a unui num&#259;r &icirc;ntreg de tip long.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>Deplasare la dreapta. <FONT COLOR=\"red\">i &gt;&gt; j</FONT>, num&#259;r de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b19\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la dreapta a unui num&#259;r &icirc;ntreg de tip byte.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s19\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la dreapta a unui num&#259;r &icirc;ntreg de tip short.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i19\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la dreapta a unui num&#259;r &icirc;ntreg de tip int.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l19\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la dreapta a unui num&#259;r &icirc;ntreg de tip long.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>Deplasare la dreapta a complementarului. <FONT COLOR=\"red\">(~i) &gt;&gt; j</FONT>, num&#259;r de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b20\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip byte.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s20\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip short.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i20\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip int.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l20\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip long.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>Deplasare la dreapta prin complementare la st&acirc;nga cu zerouri. <FONT COLOR=\"red\">i &gt;&gt;&gt; j</FONT>, num&#259;r de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b21\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la dreapta prin complementare la st&acirc;nga cu zerouri a unui num&#259;r &icirc;ntreg de tip byte.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s21\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la dreapta prin complementare la st&acirc;nga cu zerouri a unui num&#259;r &icirc;ntreg de tip short.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i21\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la dreapta prin complementare la st&acirc;nga cu zerouri a unui num&#259;r &icirc;ntreg de tip int.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l21\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la dreapta prin complementare la st&acirc;nga cu zerouri a unui num&#259;r &icirc;ntreg de tip long.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"52%\"><B>Deplasare la dreapta a complementarului prin complementare la st&acirc;nga cu zerouri. <FONT COLOR=\"red\">(~i) &gt;&gt;&gt; j</FONT>, num&#259;r de tip:</B></TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#b22\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip byte prin complementare la st&acirc;nga cu zerouri.')\">byte</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#s22\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip short prin complementare la st&acirc;nga cu zerouri.')\">short</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#i22\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip int prin complementare la st&acirc;nga cu zerouri.')\">int</A></B>");
+            System.out.println("</TD>");
+            System.out.println("<TD WIDTH=\"9%\">");
+            System.out.println("<P ALIGN=\"CENTER\"><B><A HREF=\"#l22\" onMouseOver=\"ShowStatus('Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip long prin complementare la st&acirc;nga cu zerouri.')\">long</A></B>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("</TABLE>");
+            System.out.println("</P>");
+            System.out.println("<P><BR>");
+            break;
+
+        case 3: // '\003'
             System.out.println("<TABLE BORDER=\"1\" WIDTH=\"100%\">");
             System.out.println("<TR>");
             System.out.println("<TD WIDTH=\"64%\">");
@@ -951,7 +1305,7 @@ public class Operatori
             System.out.println("<P><BR>");
             break;
 
-        case 3: // '\003'
+        case 4: // '\004'
             System.out.println("<TABLE BORDER=\"1\" WIDTH=\"100%\">");
             System.out.println("<TR>");
             System.out.println("<TD WIDTH=\"76%\">");
@@ -1167,7 +1521,7 @@ public class Operatori
             System.out.println("<P><BR>");
             break;
 
-        case 4: // '\004'
+        case 5: // '\005'
             System.out.println("<TABLE BORDER=\"1\" WIDTH=\"100%\">");
             System.out.println("<TR>");
             System.out.println("<TD WIDTH=\"88%\">");
@@ -1325,29 +1679,82 @@ public class Operatori
         System.out.println();
         switch(i)
         {
+        
         case 1: // '\001'
+            tabel_shortbyte((byte)(int)l, (byte)(int)l1);
+            tabel_byte((byte)(int)l, (byte)(int)l1);
+            tabel_short((short)(int)l, (short)(int)l1);
+            tabel_int((int)l, (int)l1);
+            tabel_long(l, l1);
+            break;
+        
+        case 2: // '\002'
             tabel_byte((byte)(int)l, (byte)(int)l1);
             tabel_short((short)(int)l, (short)(int)l1);
             tabel_int((int)l, (int)l1);
             tabel_long(l, l1);
             break;
 
-        case 2: // '\002'
+        case 3: // '\003'
             tabel_short((short)(int)l, (short)(int)l1);
             tabel_int((int)l, (int)l1);
             tabel_long(l, l1);
             break;
 
-        case 3: // '\003'
+        case 4: // '\004'
             tabel_int((int)l, (int)l1);
             tabel_long(l, l1);
             break;
 
-        case 4: // '\004'
+        case 5: // '\005'
             tabel_long(l, l1);
             break;
+        
 
         }
+        System.out.println();
+        System.out.println();
+    }
+    static void tabel_shortbyte(byte byte0, byte byte1)
+    {
+        byte byte2 = 7;
+        byte byte3 = -8;
+        byte b = byte0;
+        System.out.println();
+        System.out.println();
+        System.out.println("<TABLE BORDER=\"1\" WIDTH=\"100%\">");
+        System.out.println("<TR>");
+        System.out.println("<TD WIDTH=\"100%\">");
+        System.out.println("<P ALIGN=\"CENTER\"><A NAME=\"8\"></A><B><SPAN STYLE=\"Font-Size : 14pt\">Opera&#355;ii cu numere &icirc;ntregi de tip byte (reprezentare pe 4 de bi&#355;i):</SPAN></B>");
+        System.out.println("</TD>");
+        System.out.println("</TR>");
+        tabel1_shortbyte(1, "b01", "Cel mai mare &icirc;ntreg de tip byte pozitiv: 2<SUP>4</SUP> - 1", "", byte0, byte1, byte2);
+        tabel1_shortbyte(1, "b02", "Cel mai mic &icirc;ntreg de tip byte negativ:  -2<SUP>4</SUP>", "", byte0, byte1, byte3);
+        tabel1_shortbyte(1, "b03", "Num&#259;rul &icirc;ntreg de tip byte +1", "", byte0, byte1, 1);
+        tabel1_shortbyte(1, "b04", "Num&#259;rul &icirc;ntreg de tip byte -1", "", byte0, byte1, -1);
+       	tabel1_shortbyte(1, "b05", "Num&#259;rul &icirc;ntreg de tip byte i", "", byte0, byte1, byte0);
+        tabel1_shortbyte(1, "b06", "Num&#259;rul &icirc;ntreg de tip byte j", "", byte0, byte1, byte1);
+        tabel1_shortbyte(2, "b07", "Opera&#355;ia de schimbare de semn a unui num&#259;r &icirc;ntreg de tip byte: -i", "-i", byte0, byte1, -byte0);
+        tabel1_shortbyte(2, "b08", "Opera&#355;ia de complementariere a unui num&#259;r &icirc;ntreg de tip byte: ~i", "~i", byte0, byte1, ~byte0);
+        b = byte0; 
+        tabel1_shortbyte(2, "b09", "Opera&#355;ia de incrementare cu 1 a unui num&#259;r &icirc;ntreg de tip byte: ++i", "++i", byte0, byte1, ++b);
+        b = byte0; 
+        tabel1_shortbyte(2, "b010", "Opera&#355;ia de decrementare cu 1 a unui num&#259;r &icirc;ntreg de tip byte: - -i", "- -i", byte0, byte1, --b);
+        tabel1_shortbyte(3, "b011", "Opera&#355;ia de adunare a dou&#259; numere &icirc;ntregi de tip byte: i + j", "i + j", byte0, byte1, byte0 + byte1);
+        tabel1_shortbyte(3, "b012", "Opera&#355;ia de Sc&#259;dere a dou&#259; numere &icirc;ntregi de tip byte: i - j", "i - j", byte0, byte1, byte0 - byte1);
+        tabel1_shortbyte(3, "b013", "Opera&#355;ia de &Icirc;nmul&#355;ire a dou&#259; numere &icirc;ntregi de tip byte: i * j", "i * j", byte0, byte1, byte0 * byte1);
+        tabel1_shortbyte(3, "b014", "Operatia de &Icirc;mp&#259;r&#355;ire a dou&#259; numere &icirc;ntregi de tip byte: i / j", "i / j", byte0, byte1, byte0 / byte1);
+        tabel1_shortbyte(3, "b015", "Opera&#355;ia &#350;I logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip byte: i & j", "i & j", byte0, byte1, byte0 & byte1);
+        tabel1_shortbyte(3, "b016", "Opera&#355;ia SAU logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip byte: i | j", "i | j", byte0, byte1, byte0 | byte1);
+        tabel1_shortbyte(3, "b017", "Opera&#355;ia SAU EXCLUSIV &icirc;ntre dou&#259; numere &icirc;ntregi de tip byte: i ^ j", "i ^ j", byte0, byte1, byte0 ^ byte1);
+        tabel1_shortbyte(3, "b018", "Opera&#355;ia de deplasare la st&acirc;nga a unui num&#259;r &icirc;ntreg de tip byte: i << j", "i << j", byte0, byte1, byte0 << byte1);
+        tabel1_shortbyte(3, "b019", "Opera&#355;ia de deplasare la dreapta a unui num&#259;r &icirc;ntreg de tip byte: i >> j", "i >> j", byte0, byte1, byte0 >> byte1);
+        tabel1_shortbyte(3, "b020", "Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip byte:(~i) >> j", "(~i) >> j", byte0, byte1, ~byte0 >> byte1);
+        tabel1_shortbyte(3, "b021", "Opera&#355;ia de deplasare la dreapta prin complementare la st&acirc;nga cu zerouri a unui num&#259;r &icirc;ntreg de tip byte: i >>> j", "i >>> j", byte0, byte1, byte0 >>> byte1);
+        tabel1_shortbyte(3, "b022", "Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip byte prin complementare la st&acirc;nga cu zerouri:(~i) >>> j", "(~i) >>> j", byte0, byte1, ~byte0 >>> byte1);
+        System.out.println("</TABLE>");
+        System.out.println("</P>");
+        System.out.println("<P><BR>");
         System.out.println();
         System.out.println();
     }
@@ -1526,6 +1933,209 @@ public class Operatori
         System.out.println("<P><BR>");
         System.out.println();
         System.out.println();
+    }
+    
+    
+    static void tabel1_shortbyte(int i, String s, String s1, String s2, byte byte0, byte byte1, int j)
+    {
+        switch(i)
+        {
+        default:
+            break;
+
+        case 1: // '\001'
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"100%\"><A NAME=" + s + "></A><B><FONT COLOR=" + '"' + "red" + '"' + ">" + s1 + "</FONT></B><BR>");
+            System.out.println("<BR>");
+            System.out.println("<TABLE BORDER=\"0\" WIDTH=\"100%\">");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>zecimal:</B></TD>");
+            System.out.println("<TD WIDTH=\"85%\">" + j + "</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>hexazecimal:</B></TD>");
+            System.out.println("<TD WIDTH=\"85%\">" + ByteToHex(j) + "</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>binar:</B></TD>");
+            System.out.print("<TD WIDTH=\"85%\">");
+            for(int k = 3; k >= 0; k--)
+                if((1 << k & j) != 0)
+                    System.out.print("1");
+                else
+                    System.out.print("0");
+
+            System.out.print("</TD>");
+            System.out.println("</TR>");
+            System.out.println("</TABLE>");
+            System.out.println("<BR>");
+            System.out.println("<BR>");
+            System.out.println("<B><A HREF=\"#index\" onMouseOver=\"ShowStatus('index')\">index</A></B></TD>");
+            System.out.println("</TR>");
+            break;
+
+        case 2: // '\002'
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"100%\"><A NAME=" + s + "></A><B><FONT COLOR=" + '"' + "red" + '"' + ">" + s1 + "</FONT></B><BR>");
+            System.out.println("<BR>");
+            System.out.println("<TABLE BORDER=\"0\" WIDTH=\"100%\">");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>zecimal:</B></TD>");
+            System.out.println("<TD WIDTH=\"85%\">");
+            System.out.println("<TABLE BORDER=\"0\" WIDTH=\"100%\">");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>i:</B></TD>");
+            System.out.println("<TD WIDTH=\"85%\">" + byte0 + "</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>" + s2 + ":</B></TD>");
+            System.out.println("<TD WIDTH=\"85%\">" + j + "</TD>");
+            System.out.println("</TR>");
+            System.out.println("</TABLE>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>hexazecimal:</B></TD>");
+            System.out.println("<TD WIDTH=\"85%\">");
+            System.out.println("<TABLE BORDER=\"0\" WIDTH=\"100%\">");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>i:</B></TD>");
+            System.out.println("<TD WIDTH=\"85%\">" + ByteToHex(byte0) + "</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>" + s2 + ":</B></TD>");
+            System.out.println("<TD WIDTH=\"85%\">" + ByteToHex(j) + "</TD>");
+            System.out.println("</TR>");
+            System.out.println("</TABLE>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>binar:</B></TD>");
+            System.out.println("<TD WIDTH=\"85%\">");
+            System.out.println("<TABLE BORDER=\"0\" WIDTH=\"100%\">");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>i:</B></TD>");
+            System.out.print("<TD WIDTH=\"85%\">");
+            for(int l = 3; l >= 0; l--)
+                if((1 << l & byte0) != 0)
+                    System.out.print("1");
+                else
+                    System.out.print("0");
+
+            System.out.print("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>" + s2 + ":</B></TD>");
+            System.out.print("<TD WIDTH=\"85%\">");
+            for(int i1 = 3; i1 >= 0; i1--)
+                if((1 << i1 & j) != 0)
+                    System.out.print("1");
+                else
+                    System.out.print("0");
+
+            System.out.print("</TD>");
+            System.out.println("</TR>");
+            System.out.println("</TABLE>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("</TABLE>");
+            System.out.println("<BR>");
+            System.out.println("<BR>");
+            System.out.println("<B><A HREF=\"#index\" onMouseOver=\"ShowStatus('index')\">index</A></B></TD>");
+            System.out.println("</TR>");
+            break;
+
+        case 3: // '\003'
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"100%\"><A NAME=" + s + "></A><B><FONT COLOR=" + '"' + "red" + '"' + ">" + s1 + "</FONT></B><BR>");
+            System.out.println("<BR>");
+            System.out.println("<TABLE BORDER=\"0\" WIDTH=\"100%\">");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>zecimal:</B></TD>");
+            System.out.println("<TD WIDTH=\"85%\">");
+            System.out.println("<TABLE BORDER=\"0\" WIDTH=\"100%\">");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>i:</B></TD>");
+            System.out.println("<TD WIDTH=\"85%\">" + byte0 + "</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>j:</B></TD>");
+            System.out.println("<TD WIDTH=\"85%\">" + byte1 + "</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>" + s2 + ":</B></TD>");
+            System.out.println("<TD WIDTH=\"85%\">" + j + "</TD>");
+            System.out.println("</TR>");
+            System.out.println("</TABLE>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>hexazecimal:</B></TD>");
+            System.out.println("<TD WIDTH=\"85%\">");
+            System.out.println("<TABLE BORDER=\"0\" WIDTH=\"100%\">");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>i:</B></TD>");
+            System.out.println("<TD WIDTH=\"85%\">" + ByteToHex(byte0) + "</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>j:</B></TD>");
+            System.out.println("<TD WIDTH=\"85%\">" + ByteToHex(byte1) + "</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>" + s2 + ":</B></TD>");
+            System.out.println("<TD WIDTH=\"85%\">" + ByteToHex(j) + "</TD>");
+            System.out.println("</TR>");
+            System.out.println("</TABLE>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>binar:</B></TD>");
+            System.out.println("<TD WIDTH=\"85%\">");
+            System.out.println("<TABLE BORDER=\"0\" WIDTH=\"100%\">");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%\"><B>i:</B></TD>");
+            System.out.print("<TD WIDTH=\"85%\">");
+            for(int j1 = 3; j1 >= 0; j1--)
+                if((1 << j1 & byte0) != 0)
+                    System.out.print("1");
+                else
+                    System.out.print("0");
+
+            System.out.print("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"15%%\"><B>j:</B></TD>");
+            System.out.print("<TD WIDTH=\"85%\">");
+            for(int k1 = 3; k1 >= 0; k1--)
+                if((1 << k1 & byte1) != 0)
+                    System.out.print("1");
+                else
+                    System.out.print("0");
+
+            System.out.print("</TD>");
+            System.out.println("</TR>");
+            System.out.println("<TR>");
+            System.out.println("<TD WIDTH=\"10%\"><B>" + s2 + ":</B></TD>");
+            System.out.print("<TD WIDTH=\"87%\">");
+            for(int l1 = 3; l1 >= 0; l1--) // l1 = 7 old values
+                if((1 << l1 & j) != 0)
+                    System.out.print("1");
+                else
+                    System.out.print("0");
+
+            System.out.print("</TD>");
+            System.out.println("</TR>");
+            System.out.println("</TABLE>");
+            System.out.println("</TD>");
+            System.out.println("</TR>");
+            System.out.println("</TABLE>");
+            System.out.println("<BR>");
+            System.out.println("<BR>");
+            System.out.println("<B><A HREF=\"#index\" onMouseOver=\"ShowStatus('index')\">index</A></B></TD>");
+            System.out.println("</TR>");
+            break;
+
+        }
     }
 
     static void tabel1_byte(int i, String s, String s1, String s2, byte byte0, byte byte1, int j)
