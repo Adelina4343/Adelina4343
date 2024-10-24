@@ -1,0 +1,1 @@
+"C:\Program Files\Java\jdk-23\bin\javac" Operatori.java > erori.txt 2>&1

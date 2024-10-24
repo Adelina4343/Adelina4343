@@ -1,0 +1,4789 @@
+<HTML>
+
+<HEAD>
+
+<SCRIPT language="javascript">
+var timerONE
+var timerTWO
+var defStatus = ' '
+function ShowStatus(newstat){
+clearTimeout(timerONE)
+clearTimeout(timerTWO)
+if (newstat != defStatus){
+var cmd1 = 'ShowStatus("' + defStatus + '")'
+timerONE = window.setTimeout(cmd1,6000)}
+scrllStatus(newstat,newstat.length)}
+function scrllStatus(scrllStat,i){
+if (i >= 0){
+if (i >= 2) i = i - 2
+else  --i
+window.status = scrllStat.substring(i,scrllStat.length)
+cmd2='scrllStatus("'+ scrllStat +'",'+ i +')'
+timerTWO = window.setTimeout(cmd2,10)}}
+</SCRIPT>
+
+<TITLE>Opera&#355;ii cu numere &icirc;ntregi.</TITLE>
+
+</HEAD>
+
+<BODY BGCOLOR="#ffffe6" TEXT="black" LINK="#0033CC" ALINK="red" VLINK="#0033CC" BGPROPERTIES="fixed">
+
+<HR>
+<B><SPAN STYLE="Font-Size : 14pt">A&#355;i introdus urm&#259;toarele numere &icirc;ntregi:  i = 2550,  j = 2,  k = 1</SPAN></B><SPAN STYLE="Font-Size : 14pt"> </SPAN><BR>
+<HR>
+<BR><BR>
+<B>Sintaxa liniei de comand&#259; este urm&#259;toarea: <FONT COLOR="red">java  Operatori i  j  k  >  info.htm</FONT><BR>
+unde i &#351;i j trebuie s&#259; fie dou&#259; numere &icirc;ntregi cuprinse &icirc;ntre -9223372036854775808 &#351;i 9223372036854775807 iar num&#259;rul k trebuie s&#259; fie 0 sau 1. Valoarea k = 0 va determina afi&#351;area opera&#355;iilor f&#259;r&#259; dep&#259;&#351;iri de domeniu iar k = 1 va determina afi&#351;area opera&#355;iilor cu dep&#259;&#351;iri de domeniu.
+<BR><BR>
+Testa&#355;i &#351;i alte valori.</B>
+<BR><BR>
+<HR>
+<BR>
+<A NAME="index"></A>
+
+
+<TABLE BORDER="1" WIDTH="100%">
+<TR>
+<TD WIDTH="52%">
+<P ALIGN="CENTER"><B>Tipul opera&#355;iei</B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#8" onMouseOver="ShowStatus('Opera&#355;ii cu numere &icirc;ntregi de tip byte.')">(8 bi&#355;i)</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#16" onMouseOver="ShowStatus('Opera&#355;ii cu numere &icirc;ntregi de tip short.')">(16 bi&#355;i)</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#32" onMouseOver="ShowStatus('Opera&#355;ii cu numere &icirc;ntregi de tip int.')">(32 bi&#355;i)</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#64" onMouseOver="ShowStatus('Opera&#355;ii cu numere &icirc;ntregi de tip long.')">(64 bi&#355;i)</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>Cel mai mare num&#259;r &icirc;ntreg pozitiv de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b1" onMouseOver="ShowStatus('Cel mai mare num&#259;r &icirc;ntreg pozitiv de tip byte.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s1" onMouseOver="ShowStatus('Cel mai mare num&#259;r &icirc;ntreg pozitiv de tip short.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i1" onMouseOver="ShowStatus('Cel mai mare num&#259;r &icirc;ntreg pozitiv de tip int.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l1" onMouseOver="ShowStatus('Cel mai mare num&#259;r &icirc;ntreg pozitiv de tip long.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>Cel mai mic num&#259;r &icirc;ntreg negativ de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b2" onMouseOver="ShowStatus('Cel mai mic num&#259;r &icirc;ntreg negativ de tip byte.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s2" onMouseOver="ShowStatus('Cel mai mic num&#259;r &icirc;ntreg negativ de tip short.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i2" onMouseOver="ShowStatus('Cel mai mic num&#259;r &icirc;ntreg negativ de tip int.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l2" onMouseOver="ShowStatus('Cel mai mic num&#259;r &icirc;ntreg negativ de tip long.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>Num&#259;rul <FONT COLOR="red">1</FONT>, num&#259;r de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b3" onMouseOver="ShowStatus('Num&#259;rul de tip byte 1.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s3" onMouseOver="ShowStatus('Num&#259;rul de tip short 1.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i3" onMouseOver="ShowStatus('Num&#259;rul de tip int 1.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l3" onMouseOver="ShowStatus('Num&#259;rul de tip long 1.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>Num&#259;rul <FONT COLOR="red">-1</FONT>, num&#259;r de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b4" onMouseOver="ShowStatus('Num&#259;rul de tip byte -1.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s4" onMouseOver="ShowStatus('Num&#259;rul de tip short -1.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i4" onMouseOver="ShowStatus('Num&#259;rul de tip int -1.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l4" onMouseOver="ShowStatus('Num&#259;rul de tip long -1.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>Num&#259;rul <FONT COLOR="red">i</FONT>, num&#259;r de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b5" onMouseOver="ShowStatus('Num&#259;rul de tip byte i.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s5" onMouseOver="ShowStatus('Num&#259;rul de tip short i.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i5" onMouseOver="ShowStatus('Num&#259;rul de tip int i.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l5" onMouseOver="ShowStatus('Num&#259;rul de tip long i.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>Num&#259;rul <FONT COLOR="red">j</FONT>, num&#259;r de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b6" onMouseOver="ShowStatus('Num&#259;rul de tip byte j.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s6" onMouseOver="ShowStatus('Num&#259;rul de tip short j.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i6" onMouseOver="ShowStatus('Num&#259;rul de tip int j.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l6" onMouseOver="ShowStatus('Num&#259;rul de tip long j.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>Schimbare de semn. <FONT COLOR="red">-i</FONT>, num&#259;r de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b7" onMouseOver="ShowStatus('Opera&#355;ia de schimbare de semn a unui num&#259;r &icirc;ntreg de tip byte.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s7" onMouseOver="ShowStatus('Opera&#355;ia de schimbare de semn a unui num&#259;r &icirc;ntreg de tip short.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i7" onMouseOver="ShowStatus('Opera&#355;ia de schimbare de semn a unui num&#259;r &icirc;ntreg de tip int.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l7" onMouseOver="ShowStatus('Opera&#355;ia de schimbare de semn a unui num&#259;r &icirc;ntreg de tip long.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>Complementariere. <FONT COLOR="red">~i</FONT>, num&#259;r de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b8" onMouseOver="ShowStatus('Opera&#355;ia de complementariere a unui num&#259;r &icirc;ntreg de tip byte.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s8" onMouseOver="ShowStatus('Opera&#355;ia de complementariere a unui num&#259;r &icirc;ntreg de tip short.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i8" onMouseOver="ShowStatus('Opera&#355;ia de complementariere a unui num&#259;r &icirc;ntreg de tip int.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l8" onMouseOver="ShowStatus('Opera&#355;ia de complementariere a unui num&#259;r &icirc;ntreg de tip long.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>Incrementare cu 1. <FONT COLOR="red">++i</FONT>, num&#259;r de &#355;ip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b9" onMouseOver="ShowStatus('Opera&#355;ia de incrementare cu 1 a unui num&#259;r &icirc;ntreg de tip byte.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s9" onMouseOver="ShowStatus('Opera&#355;ia de incrementare cu 1 a unui num&#259;r &icirc;ntreg de tip short.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i9" onMouseOver="ShowStatus('Opera&#355;ia de incrementare cu 1 a unui num&#259;r &icirc;ntreg de tip int.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l9" onMouseOver="ShowStatus('Opera&#355;ia de incrementare cu 1 a unui num&#259;r &icirc;ntreg de tip long.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>Decrementare cu 1. <FONT COLOR="red">- -i</FONT>, num&#259;r de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b10" onMouseOver="ShowStatus('Opera&#355;ia de decrementare cu 1 a unui num&#259;r &icirc;ntreg de tip byte.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s10" onMouseOver="ShowStatus('Opera&#355;ia de decrementare cu 1 a unui num&#259;r &icirc;ntreg de tip short.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i10" onMouseOver="ShowStatus('Opera&#355;ia de decrementare cu 1 a unui num&#259;r &icirc;ntreg de tip int.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l10" onMouseOver="ShowStatus('Opera&#355;ia de decrementare cu 1 a unui num&#259;r &icirc;ntreg de tip long.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>Adunare. <FONT COLOR="red">i + j</FONT>, num&#259;r de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b11" onMouseOver="ShowStatus('Opera&#355;ia de adunare a dou&#259; numere &icirc;ntregi de tip byte.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s11" onMouseOver="ShowStatus('Opera&#355;ia de adunare a dou&#259; numere &icirc;ntregi de tip short.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i11" onMouseOver="ShowStatus('Opera&#355;ia de adunare a dou&#259; numere &icirc;ntregi de tip int.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l11" onMouseOver="ShowStatus('Opera&#355;ia de adunare a dou&#259; numere &icirc;ntregi de tip long.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>Sc&#259;dere. <FONT COLOR="red">i - j</FONT>, num&#259;r de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b12" onMouseOver="ShowStatus('Opera&#355;ia de Sc&#259;dere a dou&#259; numere &icirc;ntregi de tip byte.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s12" onMouseOver="ShowStatus('Opera&#355;ia de Sc&#259;dere a dou&#259; numere &icirc;ntregi de tip short.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i12" onMouseOver="ShowStatus('Opera&#355;ia de Sc&#259;dere a dou&#259; numere &icirc;ntregi de tip int.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l12" onMouseOver="ShowStatus('Opera&#355;ia de Sc&#259;dere a dou&#259; numere &icirc;ntregi de tip long.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>&Icirc;nmul&#355;ire. <FONT COLOR="red">i * j</FONT>, num&#259;r de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b13" onMouseOver="ShowStatus('Opera&#355;ia de &Icirc;nmul&#355;ire a dou&#259; numere &icirc;ntregi de tip byte.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s13" onMouseOver="ShowStatus('Opera&#355;ia de &Icirc;nmul&#355;ire a dou&#259; numere &icirc;ntregi de tip short.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i13" onMouseOver="ShowStatus('Opera&#355;ia de &Icirc;nmul&#355;ire a dou&#259; numere &icirc;ntregi de tip int.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l13" onMouseOver="ShowStatus('Opera&#355;ia de &Icirc;nmul&#355;ire a dou&#259; numere &icirc;ntregi de tip long.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>&Icirc;mp&#259;r&#355;ire. <FONT COLOR="red">i / j</FONT>, num&#259;r de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b14" onMouseOver="ShowStatus('Opera&#355;ia de &Icirc;mp&#259;r&#355;ire a dou&#259; numere &icirc;ntregi de tip byte.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s14" onMouseOver="ShowStatus('Opera&#355;ia de &Icirc;mp&#259;r&#355;ire a dou&#259; numere &icirc;ntregi de tip short.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i14" onMouseOver="ShowStatus('Opera&#355;ia de &Icirc;mp&#259;r&#355;ire a dou&#259; numere &icirc;ntregi de tip int.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l14" onMouseOver="ShowStatus('Opera&#355;ia de &Icirc;mp&#259;r&#355;ire a dou&#259; numere &icirc;ntregi de tip long.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>&#350;I logic. <FONT COLOR="red">i &amp; j</FONT>, num&#259;r de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b15" onMouseOver="ShowStatus('Opera&#355;ia &#350;I logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip byte.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s15" onMouseOver="ShowStatus('Opera&#355;ia &#350;I logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip short.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i15" onMouseOver="ShowStatus('Opera&#355;ia &#350;I logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip int.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l15" onMouseOver="ShowStatus('Opera&#355;ia &#350;I logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip long.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>SAU logic. <FONT COLOR="red">i | j</FONT>, num&#259;r de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b16" onMouseOver="ShowStatus('Opera&#355;ia SAU logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip byte.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s16" onMouseOver="ShowStatus('Opera&#355;ia SAU logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip short.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i16" onMouseOver="ShowStatus('Opera&#355;ia SAU logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip int.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l16" onMouseOver="ShowStatus('Opera&#355;ia SAU logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip long.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>SAU EXCLUSIV. <FONT COLOR="red">i ^ j</FONT>, num&#259;r de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b17" onMouseOver="ShowStatus('Opera&#355;ia SAU EXCLUSIV &icirc;ntre dou&#259; numere &icirc;ntregi de tip byte.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s17" onMouseOver="ShowStatus('Opera&#355;ia SAU EXCLUSIV &icirc;ntre dou&#259; numere &icirc;ntregi de tip short.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i17" onMouseOver="ShowStatus('Opera&#355;ia SAU EXCLUSIV &icirc;ntre dou&#259; numere &icirc;ntregi de tip int.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l17" onMouseOver="ShowStatus('Opera&#355;ia SAU EXCLUSIV &icirc;ntre dou&#259; numere &icirc;ntregi de tip long.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>Deplasare la st&acirc;nga. <FONT COLOR="red">i &lt;&lt; j</FONT>, num&#259;r de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b18" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la st&acirc;nga a unui num&#259;r &icirc;ntreg de tip byte.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s18" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la st&acirc;nga a unui num&#259;r &icirc;ntreg de tip short.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i18" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la st&acirc;nga a unui num&#259;r &icirc;ntreg de tip int.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l18" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la st&acirc;nga a unui num&#259;r &icirc;ntreg de tip long.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>Deplasare la dreapta. <FONT COLOR="red">i &gt;&gt; j</FONT>, num&#259;r de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b19" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la dreapta a unui num&#259;r &icirc;ntreg de tip byte.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s19" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la dreapta a unui num&#259;r &icirc;ntreg de tip short.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i19" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la dreapta a unui num&#259;r &icirc;ntreg de tip int.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l19" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la dreapta a unui num&#259;r &icirc;ntreg de tip long.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>Deplasare la dreapta a complementarului. <FONT COLOR="red">(~i) &gt;&gt; j</FONT>, num&#259;r de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b20" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip byte.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s20" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip short.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i20" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip int.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l20" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip long.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>Deplasare la dreapta prin complementare la st&acirc;nga cu zerouri. <FONT COLOR="red">i &gt;&gt;&gt; j</FONT>, num&#259;r de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b21" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la dreapta prin complementare la st&acirc;nga cu zerouri a unui num&#259;r &icirc;ntreg de tip byte.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s21" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la dreapta prin complementare la st&acirc;nga cu zerouri a unui num&#259;r &icirc;ntreg de tip short.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i21" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la dreapta prin complementare la st&acirc;nga cu zerouri a unui num&#259;r &icirc;ntreg de tip int.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l21" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la dreapta prin complementare la st&acirc;nga cu zerouri a unui num&#259;r &icirc;ntreg de tip long.')">long</A></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="52%"><B>Deplasare la dreapta a complementarului prin complementare la st&acirc;nga cu zerouri. <FONT COLOR="red">(~i) &gt;&gt;&gt; j</FONT>, num&#259;r de tip:</B></TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#b22" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip byte prin complementare la st&acirc;nga cu zerouri.')">byte</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#s22" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip short prin complementare la st&acirc;nga cu zerouri.')">short</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#i22" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip int prin complementare la st&acirc;nga cu zerouri.')">int</A></B>
+</TD>
+<TD WIDTH="12%">
+<P ALIGN="CENTER"><B><A HREF="#l22" onMouseOver="ShowStatus('Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip long prin complementare la st&acirc;nga cu zerouri.')">long</A></B>
+</TD>
+</TR>
+</TABLE>
+</P>
+<P><BR>
+
+
+
+
+
+
+<TABLE BORDER="1" WIDTH="100%">
+<TR>
+<TD WIDTH="100%">
+<P ALIGN="CENTER"><A NAME="8"></A><B><SPAN STYLE="Font-Size : 14pt">Opera&#355;ii cu numere &icirc;ntregi de tip byte (reprezentare pe 8 de bi&#355;i):</SPAN></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b1></A><B><FONT COLOR="red">Cel mai mare &icirc;ntreg de tip byte pozitiv: 2<SUP>7</SUP> - 1</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">127</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">7f</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">01111111</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b2></A><B><FONT COLOR="red">Cel mai mic &icirc;ntreg de tip byte negativ:  -2<SUP>7</SUP></FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">-128</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">80</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">10000000</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b3></A><B><FONT COLOR="red">Num&#259;rul &icirc;ntreg de tip byte +1</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">1</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">1</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">00000001</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b4></A><B><FONT COLOR="red">Num&#259;rul &icirc;ntreg de tip byte -1</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">-1</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">ff</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">11111111</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b5></A><B><FONT COLOR="red">Num&#259;rul &icirc;ntreg de tip byte i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">-10</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">11110110</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b6></A><B><FONT COLOR="red">Num&#259;rul &icirc;ntreg de tip byte j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">00000010</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b7></A><B><FONT COLOR="red">Opera&#355;ia de schimbare de semn a unui num&#259;r &icirc;ntreg de tip byte: -i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">-10</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>-i:</B></TD>
+<TD WIDTH="85%">10</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>-i:</B></TD>
+<TD WIDTH="85%">a</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">11110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>-i:</B></TD>
+<TD WIDTH="85%">00001010</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b8></A><B><FONT COLOR="red">Opera&#355;ia de complementariere a unui num&#259;r &icirc;ntreg de tip byte: ~i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">-10</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>~i:</B></TD>
+<TD WIDTH="85%">9</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>~i:</B></TD>
+<TD WIDTH="85%">9</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">11110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>~i:</B></TD>
+<TD WIDTH="85%">00001001</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b9></A><B><FONT COLOR="red">Opera&#355;ia de incrementare cu 1 a unui num&#259;r &icirc;ntreg de tip byte: ++i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">-10</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>++i:</B></TD>
+<TD WIDTH="85%">-9</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>++i:</B></TD>
+<TD WIDTH="85%">f7</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">11110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>++i:</B></TD>
+<TD WIDTH="85%">11110111</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b10></A><B><FONT COLOR="red">Opera&#355;ia de decrementare cu 1 a unui num&#259;r &icirc;ntreg de tip byte: - -i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">-10</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>- -i:</B></TD>
+<TD WIDTH="85%">-11</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>- -i:</B></TD>
+<TD WIDTH="85%">f5</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">11110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>- -i:</B></TD>
+<TD WIDTH="85%">11110101</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b11></A><B><FONT COLOR="red">Opera&#355;ia de adunare a dou&#259; numere &icirc;ntregi de tip byte: i + j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">-10</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i + j:</B></TD>
+<TD WIDTH="85%">-8</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i + j:</B></TD>
+<TD WIDTH="85%">f8</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">11110110</TD></TR>
+<TR>
+<TD WIDTH="15%%"><B>j:</B></TD>
+<TD WIDTH="85%">00000010</TD></TR>
+<TR>
+<TD WIDTH="10%"><B>i + j:</B></TD>
+<TD WIDTH="87%">11111000</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b12></A><B><FONT COLOR="red">Opera&#355;ia de Sc&#259;dere a dou&#259; numere &icirc;ntregi de tip byte: i - j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">-10</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i - j:</B></TD>
+<TD WIDTH="85%">-12</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i - j:</B></TD>
+<TD WIDTH="85%">f4</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">11110110</TD></TR>
+<TR>
+<TD WIDTH="15%%"><B>j:</B></TD>
+<TD WIDTH="85%">00000010</TD></TR>
+<TR>
+<TD WIDTH="10%"><B>i - j:</B></TD>
+<TD WIDTH="87%">11110100</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b13></A><B><FONT COLOR="red">Opera&#355;ia de &Icirc;nmul&#355;ire a dou&#259; numere &icirc;ntregi de tip byte: i * j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">-10</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i * j:</B></TD>
+<TD WIDTH="85%">-20</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i * j:</B></TD>
+<TD WIDTH="85%">ec</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">11110110</TD></TR>
+<TR>
+<TD WIDTH="15%%"><B>j:</B></TD>
+<TD WIDTH="85%">00000010</TD></TR>
+<TR>
+<TD WIDTH="10%"><B>i * j:</B></TD>
+<TD WIDTH="87%">11101100</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b14></A><B><FONT COLOR="red">Operatia de &Icirc;mp&#259;r&#355;ire a dou&#259; numere &icirc;ntregi de tip byte: i / j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">-10</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i / j:</B></TD>
+<TD WIDTH="85%">-5</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i / j:</B></TD>
+<TD WIDTH="85%">fb</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">11110110</TD></TR>
+<TR>
+<TD WIDTH="15%%"><B>j:</B></TD>
+<TD WIDTH="85%">00000010</TD></TR>
+<TR>
+<TD WIDTH="10%"><B>i / j:</B></TD>
+<TD WIDTH="87%">11111011</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b15></A><B><FONT COLOR="red">Opera&#355;ia &#350;I logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip byte: i & j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">-10</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i & j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i & j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">11110110</TD></TR>
+<TR>
+<TD WIDTH="15%%"><B>j:</B></TD>
+<TD WIDTH="85%">00000010</TD></TR>
+<TR>
+<TD WIDTH="10%"><B>i & j:</B></TD>
+<TD WIDTH="87%">00000010</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b16></A><B><FONT COLOR="red">Opera&#355;ia SAU logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip byte: i | j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">-10</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i | j:</B></TD>
+<TD WIDTH="85%">-10</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i | j:</B></TD>
+<TD WIDTH="85%">f6</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">11110110</TD></TR>
+<TR>
+<TD WIDTH="15%%"><B>j:</B></TD>
+<TD WIDTH="85%">00000010</TD></TR>
+<TR>
+<TD WIDTH="10%"><B>i | j:</B></TD>
+<TD WIDTH="87%">11110110</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b17></A><B><FONT COLOR="red">Opera&#355;ia SAU EXCLUSIV &icirc;ntre dou&#259; numere &icirc;ntregi de tip byte: i ^ j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">-10</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i ^ j:</B></TD>
+<TD WIDTH="85%">-12</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i ^ j:</B></TD>
+<TD WIDTH="85%">f4</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">11110110</TD></TR>
+<TR>
+<TD WIDTH="15%%"><B>j:</B></TD>
+<TD WIDTH="85%">00000010</TD></TR>
+<TR>
+<TD WIDTH="10%"><B>i ^ j:</B></TD>
+<TD WIDTH="87%">11110100</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b18></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la st&acirc;nga a unui num&#259;r &icirc;ntreg de tip byte: i << j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">-10</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i << j:</B></TD>
+<TD WIDTH="85%">-40</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i << j:</B></TD>
+<TD WIDTH="85%">d8</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">11110110</TD></TR>
+<TR>
+<TD WIDTH="15%%"><B>j:</B></TD>
+<TD WIDTH="85%">00000010</TD></TR>
+<TR>
+<TD WIDTH="10%"><B>i << j:</B></TD>
+<TD WIDTH="87%">11011000</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b19></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la dreapta a unui num&#259;r &icirc;ntreg de tip byte: i >> j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">-10</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i >> j:</B></TD>
+<TD WIDTH="85%">-3</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i >> j:</B></TD>
+<TD WIDTH="85%">fd</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">11110110</TD></TR>
+<TR>
+<TD WIDTH="15%%"><B>j:</B></TD>
+<TD WIDTH="85%">00000010</TD></TR>
+<TR>
+<TD WIDTH="10%"><B>i >> j:</B></TD>
+<TD WIDTH="87%">11111101</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b20></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip byte:(~i) >> j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">-10</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >> j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >> j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">11110110</TD></TR>
+<TR>
+<TD WIDTH="15%%"><B>j:</B></TD>
+<TD WIDTH="85%">00000010</TD></TR>
+<TR>
+<TD WIDTH="10%"><B>(~i) >> j:</B></TD>
+<TD WIDTH="87%">00000010</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b21></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la dreapta prin complementare la st&acirc;nga cu zerouri a unui num&#259;r &icirc;ntreg de tip byte: i >>> j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">-10</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i >>> j:</B></TD>
+<TD WIDTH="85%">1073741821</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i >>> j:</B></TD>
+<TD WIDTH="85%">fd</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">11110110</TD></TR>
+<TR>
+<TD WIDTH="15%%"><B>j:</B></TD>
+<TD WIDTH="85%">00000010</TD></TR>
+<TR>
+<TD WIDTH="10%"><B>i >>> j:</B></TD>
+<TD WIDTH="87%">11111101</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=b22></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip byte prin complementare la st&acirc;nga cu zerouri:(~i) >>> j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">-10</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >>> j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >>> j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">11110110</TD></TR>
+<TR>
+<TD WIDTH="15%%"><B>j:</B></TD>
+<TD WIDTH="85%">00000010</TD></TR>
+<TR>
+<TD WIDTH="10%"><B>(~i) >>> j:</B></TD>
+<TD WIDTH="87%">00000010</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+</TABLE>
+</P>
+<P><BR>
+
+
+
+
+<TABLE BORDER="1" WIDTH="100%">
+<TR>
+<TD WIDTH="100%">
+<P ALIGN="CENTER"><A NAME="16"></A><B><SPAN STYLE="Font-Size : 14pt">Opera&#355;ii cu numere &icirc;ntregi de tip short (reprezentare pe 16 de bi&#355;i):</SPAN></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s1></A><B><FONT COLOR="red">Cel mai mare &icirc;ntreg de tip short pozitiv: 2<SUP>15</SUP> - 1</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">32767</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">7fff</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">0111111111111111</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s2></A><B><FONT COLOR="red">Cel mai mic &icirc;ntreg de tip short negativ:  -2<SUP>15</SUP></FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">32768</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">8000</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">1000000000000000</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s3></A><B><FONT COLOR="red">Num&#259;rul &icirc;ntreg de tip short +1</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">1</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">1</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">0000000000000001</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s4></A><B><FONT COLOR="red">Num&#259;rul &icirc;ntreg de tip short -1</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">-1</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">ffff</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">1111111111111111</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s5></A><B><FONT COLOR="red">Num&#259;rul &icirc;ntreg de tip short i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">0000100111110110</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s6></A><B><FONT COLOR="red">Num&#259;rul &icirc;ntreg de tip short j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">0000000000000010</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s7></A><B><FONT COLOR="red">Opera&#355;ia de schimbare de semn a unui num&#259;r &icirc;ntreg de tip short: -i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>-i:</B></TD>
+<TD WIDTH="85%">-2550</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>-i:</B></TD>
+<TD WIDTH="85%">f60a</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>-i:</B></TD>
+<TD WIDTH="85%">1111011000001010</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s8></A><B><FONT COLOR="red">Opera&#355;ia de complementariere a unui num&#259;r &icirc;ntreg de tip short: ~i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>~i:</B></TD>
+<TD WIDTH="85%">-2551</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>~i:</B></TD>
+<TD WIDTH="85%">f609</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>~i:</B></TD>
+<TD WIDTH="85%">1111011000001001</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s9></A><B><FONT COLOR="red">Opera&#355;ia de incrementare cu 1 a unui num&#259;r &icirc;ntreg de tip short: ++i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>++i:</B></TD>
+<TD WIDTH="85%">2551</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>++i:</B></TD>
+<TD WIDTH="85%">9f7</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>++i:</B></TD>
+<TD WIDTH="85%">0000100111110111</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s10></A><B><FONT COLOR="red">Opera&#355;ia de decrementare cu 1 a unui num&#259;r &icirc;ntreg de tip short: - -i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>- -i:</B></TD>
+<TD WIDTH="85%">2549</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>- -i:</B></TD>
+<TD WIDTH="85%">9f5</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>- -i:</B></TD>
+<TD WIDTH="85%">0000100111110101</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s11></A><B><FONT COLOR="red">Opera&#355;ia de adunare a dou&#259; numere &icirc;ntregi de tip short: i + j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i + j:</B></TD>
+<TD WIDTH="85%">2552</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i + j:</B></TD>
+<TD WIDTH="85%">9f8</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i + j:</B></TD>
+<TD WIDTH="85%">0000100111111000</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s12></A><B><FONT COLOR="red">Opera&#355;ia de Sc&#259;dere a dou&#259; numere &icirc;ntregi de tip short: i - j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i - j:</B></TD>
+<TD WIDTH="85%">2548</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i - j:</B></TD>
+<TD WIDTH="85%">9f4</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i - j:</B></TD>
+<TD WIDTH="85%">0000100111110100</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s13></A><B><FONT COLOR="red">Opera&#355;ia de &Icirc;nmul&#355;ire a dou&#259; numere &icirc;ntregi de tip short: i * j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i * j:</B></TD>
+<TD WIDTH="85%">5100</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i * j:</B></TD>
+<TD WIDTH="85%">13ec</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i * j:</B></TD>
+<TD WIDTH="85%">0001001111101100</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s14></A><B><FONT COLOR="red">Opera&#355;ia de &Icirc;mp&#259;r&#355;ire a dou&#259; numere &icirc;ntregi de tip short: i / j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i / j:</B></TD>
+<TD WIDTH="85%">1275</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i / j:</B></TD>
+<TD WIDTH="85%">4fb</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i / j:</B></TD>
+<TD WIDTH="85%">0000010011111011</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s15></A><B><FONT COLOR="red">Opera&#355;ia &#350;I logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip short: i & j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i & j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i & j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i & j:</B></TD>
+<TD WIDTH="85%">0000000000000010</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s16></A><B><FONT COLOR="red">Opera&#355;ia SAU logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip short: i | j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i | j:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i | j:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i | j:</B></TD>
+<TD WIDTH="85%">0000100111110110</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s17></A><B><FONT COLOR="red">Opera&#355;ia SAU EXCLUSIV &icirc;ntre dou&#259; numere &icirc;ntregi de tip short: i ^ j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i ^ j:</B></TD>
+<TD WIDTH="85%">2548</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i ^ j:</B></TD>
+<TD WIDTH="85%">9f4</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i ^ j:</B></TD>
+<TD WIDTH="85%">0000100111110100</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s18></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la st&acirc;nga a unui num&#259;r &icirc;ntreg de tip short: i << j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i << j:</B></TD>
+<TD WIDTH="85%">10200</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i << j:</B></TD>
+<TD WIDTH="85%">27d8</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i << j:</B></TD>
+<TD WIDTH="85%">0010011111011000</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s19></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la dreapta a unui num&#259;r &icirc;ntreg de tip short: i >> j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i >> j:</B></TD>
+<TD WIDTH="85%">637</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i >> j:</B></TD>
+<TD WIDTH="85%">27d</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i >> j:</B></TD>
+<TD WIDTH="85%">0000001001111101</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s20></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip short:(~i) >> j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >> j:</B></TD>
+<TD WIDTH="85%">-638</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >> j:</B></TD>
+<TD WIDTH="85%">fd82</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >> j:</B></TD>
+<TD WIDTH="85%">1111110110000010</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s21></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la dreapta prin complementare la st&acirc;nga cu zerouri a unui num&#259;r &icirc;ntreg de tip short: i >>> j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i >>> j:</B></TD>
+<TD WIDTH="85%">637</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i >>> j:</B></TD>
+<TD WIDTH="85%">27d</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i >>> j:</B></TD>
+<TD WIDTH="85%">0000001001111101</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=s22></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip short prin complementare la st&acirc;nga cu zerouri:(~i) >>> j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >>> j:</B></TD>
+<TD WIDTH="85%">1073741186</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >>> j:</B></TD>
+<TD WIDTH="85%">fd82</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >>> j:</B></TD>
+<TD WIDTH="85%">1111110110000010</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+</TABLE>
+</P>
+<P><BR>
+
+
+
+
+<TABLE BORDER="1" WIDTH="100%">
+<TR>
+<TD WIDTH="100%">
+<P ALIGN="CENTER"><A NAME="32"></A><B><SPAN STYLE="Font-Size : 14pt">Opera&#355;ii cu numere &icirc;ntregi de tip int (reprezentare pe 32 de bi&#355;i):</SPAN></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i1></A><B><FONT COLOR="red">Cel mai mare &icirc;ntreg de tip int pozitiv: 2<SUP>31</SUP> - 1</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">2147483647</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">7fffffff</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">01111111111111111111111111111111</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i2></A><B><FONT COLOR="red">Cel mai mic &icirc;ntreg de tip int negativ:  -2<SUP>31</SUP></FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">-2147483648</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">80000000</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">10000000000000000000000000000000</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i3></A><B><FONT COLOR="red">Num&#259;rul &icirc;ntreg de tip int +1</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">1</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">1</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">00000000000000000000000000000001</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i4></A><B><FONT COLOR="red">Num&#259;rul &icirc;ntreg de tip int -1</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">-1</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">ffffffff</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">11111111111111111111111111111111</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i5></A><B><FONT COLOR="red">Num&#259;rul &icirc;ntreg de tip int i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110110</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i6></A><B><FONT COLOR="red">Num&#259;rul &icirc;ntreg de tip int j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">00000000000000000000000000000010</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i7></A><B><FONT COLOR="red">Opera&#355;ia de schimbare de semn a unui num&#259;r &icirc;ntreg de tip int: -i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>-i:</B></TD>
+<TD WIDTH="85%">-2550</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>-i:</B></TD>
+<TD WIDTH="85%">fffff60a</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>-i:</B></TD>
+<TD WIDTH="85%">11111111111111111111011000001010</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i8></A><B><FONT COLOR="red">Opera&#355;ia de complementariere a unui num&#259;r &icirc;ntreg de tip int: ~i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>~i:</B></TD>
+<TD WIDTH="85%">-2551</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>~i:</B></TD>
+<TD WIDTH="85%">fffff609</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>~i:</B></TD>
+<TD WIDTH="85%">11111111111111111111011000001001</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i9></A><B><FONT COLOR="red">Opera&#355;ia de incrementare cu 1 a unui num&#259;r &icirc;ntreg de tip int: ++i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>++i:</B></TD>
+<TD WIDTH="85%">2551</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>++i:</B></TD>
+<TD WIDTH="85%">9f7</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>++i:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110111</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i10></A><B><FONT COLOR="red">Opera&#355;ia de decrementare cu 1 a unui num&#259;r &icirc;ntreg de tip int: - -i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>- -i:</B></TD>
+<TD WIDTH="85%">2549</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>- -i:</B></TD>
+<TD WIDTH="85%">9f5</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>- -i:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110101</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i11></A><B><FONT COLOR="red">Opera&#355;ia de adunare a dou&#259; numere &icirc;ntregi de tip int: i + j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i + j:</B></TD>
+<TD WIDTH="85%">2552</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i + j:</B></TD>
+<TD WIDTH="85%">9f8</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">00000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i + j:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111111000</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i12></A><B><FONT COLOR="red">Opera&#355;ia de Sc&#259;dere a dou&#259; numere &icirc;ntregi de tip int: i - j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i - j:</B></TD>
+<TD WIDTH="85%">2548</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i - j:</B></TD>
+<TD WIDTH="85%">9f4</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">00000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i - j:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110100</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i13></A><B><FONT COLOR="red">Opera&#355;ia de &Icirc;nmul&#355;ire a dou&#259; numere &icirc;ntregi de tip int: i * j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i * j:</B></TD>
+<TD WIDTH="85%">5100</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i * j:</B></TD>
+<TD WIDTH="85%">13ec</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">00000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i * j:</B></TD>
+<TD WIDTH="85%">00000000000000000001001111101100</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i14></A><B><FONT COLOR="red">Opera&#355;ia de &Icirc;mp&#259;r&#355;ire a dou&#259; numere &icirc;ntregi de tip int: i / j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i / j:</B></TD>
+<TD WIDTH="85%">1275</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i / j:</B></TD>
+<TD WIDTH="85%">4fb</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">00000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i / j:</B></TD>
+<TD WIDTH="85%">00000000000000000000010011111011</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i15></A><B><FONT COLOR="red">Opera&#355;ia &#350;I logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip int: i & j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i & j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i & j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">00000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i & j:</B></TD>
+<TD WIDTH="85%">00000000000000000000000000000010</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i16></A><B><FONT COLOR="red">Opera&#355;ia SAU logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip int: i | j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i | j:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i | j:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">00000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i | j:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110110</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i17></A><B><FONT COLOR="red">Opera&#355;ia SAU EXCLUSIV &icirc;ntre dou&#259; numere &icirc;ntregi de tip int: i ^ j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i ^ j:</B></TD>
+<TD WIDTH="85%">2548</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i ^ j:</B></TD>
+<TD WIDTH="85%">9f4</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">00000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i ^ j:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110100</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i18></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la st&acirc;nga a unui num&#259;r &icirc;ntreg de tip int: i << j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i << j:</B></TD>
+<TD WIDTH="85%">10200</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i << j:</B></TD>
+<TD WIDTH="85%">27d8</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">00000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i << j:</B></TD>
+<TD WIDTH="85%">00000000000000000010011111011000</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i19></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la dreapta a unui num&#259;r &icirc;ntreg de tip int: i >> j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i >> j:</B></TD>
+<TD WIDTH="85%">637</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i >> j:</B></TD>
+<TD WIDTH="85%">27d</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">00000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i >> j:</B></TD>
+<TD WIDTH="85%">00000000000000000000001001111101</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i20></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip int:(~i) >> j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >> j:</B></TD>
+<TD WIDTH="85%">-638</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >> j:</B></TD>
+<TD WIDTH="85%">fffffd82</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">00000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >> j:</B></TD>
+<TD WIDTH="85%">11111111111111111111110110000010</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i21></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la dreapta prin complementare la st&acirc;nga cu zerouri a unui num&#259;r &icirc;ntreg de tip int: i >>> j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i >>> j:</B></TD>
+<TD WIDTH="85%">637</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i >>> j:</B></TD>
+<TD WIDTH="85%">27d</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">00000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i >>> j:</B></TD>
+<TD WIDTH="85%">00000000000000000000001001111101</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=i22></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip int prin complementare la st&acirc;nga cu zerouri:(~i) >>> j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >>> j:</B></TD>
+<TD WIDTH="85%">1073741186</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >>> j:</B></TD>
+<TD WIDTH="85%">3ffffd82</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">00000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">00000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >>> j:</B></TD>
+<TD WIDTH="85%">00111111111111111111110110000010</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+</TABLE>
+</P>
+<P><BR>
+
+
+
+
+<TABLE BORDER="1" WIDTH="100%">
+<TR>
+<TD WIDTH="100%">
+<P ALIGN="CENTER"><A NAME="64"></A><B><SPAN STYLE="Font-Size : 14pt">Opera&#355;ii cu numere &icirc;ntregi de tip long (reprezentare pe 64 de bi&#355;i):</SPAN></B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l1></A><B><FONT COLOR="red">Cel mai mare &icirc;ntreg de tip long pozitiv: 2<SUP>63</SUP> - 1</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">9223372036854775807</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">7fffffffffffffff</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">0111111111111111111111111111111111111111111111111111111111111111</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l2></A><B><FONT COLOR="red">Cel mai mic &icirc;ntreg de tip long negativ:  -2<SUP>63</SUP></FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">-9223372036854775808</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">8000000000000000</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">1000000000000000000000000000000000000000000000000000000000000000</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l3></A><B><FONT COLOR="red">Num&#259;rul &icirc;ntreg de tip long +1</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">1</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">1</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000000000000001</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l4></A><B><FONT COLOR="red">Num&#259;rul &icirc;ntreg de tip long -1</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">-1</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">ffffffffffffffff</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">1111111111111111111111111111111111111111111111111111111111111111</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l5></A><B><FONT COLOR="red">Num&#259;rul &icirc;ntreg de tip long i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110110</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l6></A><B><FONT COLOR="red">Num&#259;rul &icirc;ntreg de tip long j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000000000000010</TD></TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l7></A><B><FONT COLOR="red">Opera&#355;ia de schimbare de semn a unui num&#259;r &icirc;ntreg de tip long: -i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>-i:</B></TD>
+<TD WIDTH="85%">-2550</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>-i:</B></TD>
+<TD WIDTH="85%">fffffffffffff60a</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>-i:</B></TD>
+<TD WIDTH="85%">1111111111111111111111111111111111111111111111111111011000001010</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l8></A><B><FONT COLOR="red">Opera&#355;ia de complementariere a unui num&#259;r &icirc;ntreg de tip long: ~i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>~i:</B></TD>
+<TD WIDTH="85%">-2551</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>~i:</B></TD>
+<TD WIDTH="85%">fffffffffffff609</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>~i:</B></TD>
+<TD WIDTH="85%">1111111111111111111111111111111111111111111111111111011000001001</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l9></A><B><FONT COLOR="red">Opera&#355;ia de incrementare cu 1 a unui num&#259;r &icirc;ntreg de tip long: ++i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>++i:</B></TD>
+<TD WIDTH="85%">2551</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>++i:</B></TD>
+<TD WIDTH="85%">9f7</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>++i:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110111</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l10></A><B><FONT COLOR="red">Opera&#355;ia de decrementare cu 1 a unui num&#259;r &icirc;ntreg de tip long: - -i</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>- -i:</B></TD>
+<TD WIDTH="85%">2549</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>- -i:</B></TD>
+<TD WIDTH="85%">9f5</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>- -i:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110101</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l11></A><B><FONT COLOR="red">Opera&#355;ia de adunare a dou&#259; numere &icirc;ntregi de tip long: i + j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i + j:</B></TD>
+<TD WIDTH="85%">2552</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i + j:</B></TD>
+<TD WIDTH="85%">9f8</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i + j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111111000</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l12></A><B><FONT COLOR="red">Opera&#355;ia de Sc&#259;dere a dou&#259; numere &icirc;ntregi de tip long: i - j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i - j:</B></TD>
+<TD WIDTH="85%">2548</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i - j:</B></TD>
+<TD WIDTH="85%">9f4</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i - j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110100</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l13></A><B><FONT COLOR="red">Opera&#355;ia de &Icirc;nmul&#355;ire a dou&#259; numere &icirc;ntregi de tip long: i * j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i * j:</B></TD>
+<TD WIDTH="85%">5100</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i * j:</B></TD>
+<TD WIDTH="85%">13ec</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i * j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000001001111101100</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l14></A><B><FONT COLOR="red">Opera&#355;ia de &Icirc;mp&#259;r&#355;ire a dou&#259; numere &icirc;ntregi de tip long: i / j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i / j:</B></TD>
+<TD WIDTH="85%">1275</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i / j:</B></TD>
+<TD WIDTH="85%">4fb</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i / j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000010011111011</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l15></A><B><FONT COLOR="red">Opera&#355;ia &#350;I logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip long: i & j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i & j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i & j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i & j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000000000000010</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l16></A><B><FONT COLOR="red">Opera&#355;ia SAU logic &icirc;ntre dou&#259; numere &icirc;ntregi de tip long: i | j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i | j:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i | j:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i | j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110110</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l17></A><B><FONT COLOR="red">Opera&#355;ia SAU EXCLUSIV &icirc;ntre dou&#259; numere &icirc;ntregi de tip long: i ^ j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i ^ j:</B></TD>
+<TD WIDTH="85%">2548</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i ^ j:</B></TD>
+<TD WIDTH="85%">9f4</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i ^ j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110100</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l18></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la st&acirc;nga a unui num&#259;r &icirc;ntreg de tip long: i << j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i << j:</B></TD>
+<TD WIDTH="85%">10200</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i << j:</B></TD>
+<TD WIDTH="85%">27d8</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i << j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000010011111011000</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l19></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la dreapta a unui num&#259;r &icirc;ntreg de tip long: i >> j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i >> j:</B></TD>
+<TD WIDTH="85%">637</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i >> j:</B></TD>
+<TD WIDTH="85%">27d</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i >> j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000001001111101</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l20></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip long:(~i) >> j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >> j:</B></TD>
+<TD WIDTH="85%">-638</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >> j:</B></TD>
+<TD WIDTH="85%">fffffffffffffd82</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >> j:</B></TD>
+<TD WIDTH="85%">1111111111111111111111111111111111111111111111111111110110000010</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l21></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la dreapta prin complementare la st&acirc;nga cu zerouri a unui num&#259;r &icirc;ntreg de tip long: i >>> j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i >>> j:</B></TD>
+<TD WIDTH="85%">637</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>i >>> j:</B></TD>
+<TD WIDTH="85%">27d</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>i >>> j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000001001111101</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+<TR>
+<TD WIDTH="100%"><A NAME=l22></A><B><FONT COLOR="red">Opera&#355;ia de deplasare la dreapta a complementarului unui num&#259;r &icirc;ntreg de tip long prin complementare la st&acirc;nga cu zerouri:(~i) >>> j</FONT></B><BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>zecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">2550</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >>> j:</B></TD>
+<TD WIDTH="85%">4611686018427387266</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>hexazecimal:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">9f6</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">2</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >>> j:</B></TD>
+<TD WIDTH="85%">3ffffffffffffd82</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH="15%"><B>binar:</B></TD>
+<TD WIDTH="85%">
+<TABLE BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="15%"><B>i:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000100111110110</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>j:</B></TD>
+<TD WIDTH="85%">0000000000000000000000000000000000000000000000000000000000000010</TD></TR>
+<TR>
+<TD WIDTH="15%"><B>(~i) >>> j:</B></TD>
+<TD WIDTH="85%">0011111111111111111111111111111111111111111111111111110110000010</TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<B><A HREF="#index" onMouseOver="ShowStatus('index')">index</A></B></TD>
+</TR>
+</TABLE>
+</P>
+<P><BR>
+
+
+
+
